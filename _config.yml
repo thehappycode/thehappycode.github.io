@@ -14,7 +14,7 @@ timezone: Asia/Ho_Chi_Minh
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Blog # the main title
+title: thehappycode # the main title
 
 tagline: Không có việc gì là quá nhỏ hoặc quá điên 🇻🇳 # it will display as the subtitle
 
@@ -150,7 +150,7 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: "https://thehappycode.github.io/"
+baseurl: ""
 
 # ------------ The following options are not recommended to be modified ------------------
 
