@@ -24,3 +24,20 @@ RUN bash -c "source ~/.bashrc"
 # "#################################################"
 # "Install Jekyll and Bundler
 RUN gem install jekyll bundler
+
+# "#################################################"
+# "Tạo WORKDIR
+WORKDIR /app
+
+# COPY source code vào /app trong container
+COPY . /app
+
+# Bundle install các dependencies
+RUN bundler install
+
+# Mở port 4000
+EXPOSE 4000
+
+# Chạy Jekyll khi khởi động container
+CMD ["bundle", "exec", "jekyll", "serve", "--livereload", "--host", "0.0.0.0"]
+
