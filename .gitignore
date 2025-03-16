@@ -28,3 +28,6 @@ assets/js/dist
 
 # Docker
 .devcontainer
+
+# MACOS
+*.DS_Store
