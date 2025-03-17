@@ -1,5 +1,5 @@
 ---
-title: "Phân biệt Tag và Category trong Jekyll"
+title: "Phân biệt Tag và Category trong Blog"
 date: 2025-03-17 15:10:00 +0700
 categories: [Jekyll]
 tags: [Jekyll, Category, Tag]
