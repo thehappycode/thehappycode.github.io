@@ -16,7 +16,7 @@ Trong hầu hết các bài post chúng ta thường bắt gặp hai khái niệ
 - **Linh hoạt**: Một bài viết có thể có nhiều tag khác nhau.
 - **Không có cấu trúc cố định**: Các tag không có sự phân cấp.
 
-### **Ví dụ:**
+**Ví dụ:**
 Bạn có một bài viết về lập trình Python. Bạn có thể gắn tag:
 Một bài về C#:
 ```
@@ -30,10 +30,10 @@ tags: [C#, .NET, Design Pattern]
 - **Dùng khi**: Bạn muốn tổ chức bài viết theo nhóm có cấu trúc rõ ràng.
 - **Có tính phân cấp**: Một bài viết chỉ nên thuộc về **một hoặc vài danh mục nhất định**.
 
-### **Ví dụ:**
+**Ví dụ:**
 Bài viết về Jekyll có thể nằm trong danh mục:
 Bài viết về .NET có thể nằm trong danh mục:
-```jekylf
+```
 categories: [Backend]
 ```
 → Dùng để hiển thị trong thanh menu hoặc sidebar.
@@ -51,7 +51,7 @@ categories: [Backend]
 ---
 
 ## **4. Kết luận**
-- **Category**: Dùng để nhóm bài viết **chính** theo chủ đề lớn, có thể dùng cho menu.
 - **Tag**: Dùng để **bổ sung thông tin** về chủ đề chi tiết của bài viết.
+- **Category**: Dùng để nhóm bài viết **chính** theo chủ đề lớn, có thể dùng cho menu.
 
 **Gợi ý**: Một bài viết thường có **1-2 Category**, nhưng có thể có **nhiều Tag**.
