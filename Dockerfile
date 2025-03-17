@@ -39,5 +39,5 @@ RUN bundler install
 EXPOSE 4000
 
 # Chạy Jekyll khi khởi động container
-CMD ["bundle", "exec", "jekyll", "serve", "--livereload", "--host", "0.0.0.0"]
+CMD ["bundle", "exec", "jekyll", "serve", "--livereload", "--trace", "--host", "0.0.0.0"]
 
