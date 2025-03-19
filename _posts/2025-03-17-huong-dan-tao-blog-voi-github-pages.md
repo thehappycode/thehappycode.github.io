@@ -41,7 +41,7 @@ Cá nhân tôi thì Fork theme [chirpy-starter](https://github.com/cotes2020/chi
 
 Như đã trình bày bên trên, bây giờ chúng ta sẽ thực hiện host một website từ repository sử dụng nền tảng GitHub Pages như sau:
 
-- **Bước 1:** Trước tiên mở trình duyệt và truy cập đến [GitHub](http://github.com).
+- **Bước 1:** Trước tiên mở trình duyệt và truy cập đến [GitHub](https://github.com).
 - **Bước 2:** Chọn repository có sẵn hoặc bạn vừa clone/fork bên trên.
 - **Bước 3:** Chọn tab `Settings` -> `Pages`.
 - **Bước 4:** Tại phần `Build and deployment`. Bạn cần thực hiện như sau:
