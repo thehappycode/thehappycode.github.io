@@ -64,9 +64,8 @@ Bạn có thể sử dụng các lệnh cơ bản sau để kiểm tra **Neovim*
 
 ## Cấu hình file *.lua
 
-Tôi sẽ hướng dẫn bạn cấu hình theo thứ tự từ trên xuống dưới như hình bên trên.
+Tôi sẽ đi cấu hình theo thứ tự từ trên xuống dưới như trong ảnh.
 
-**Lưu ý**
 Hiện tại tôi đang sử dụng ngôn ngữ `C#` nên sẽ có một số cấu hình liên quan. Nếu bạn sử dụng ngôn ngữ lập trình khác vui lòng **research** và **thay thế** bằng ngôn ngữ bạn đang sử dụng.
 
 ### /config/lazy.lua
