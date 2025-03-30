@@ -1,8 +1,8 @@
 ---
 title: "Hướng dẫn tạo một Blog với GitHub Pages"
 date: 2025-03-17 23:55:00 +0700
-categories: [Jekyll]
-tags: [Jekyll, GitHubPages]
+categories: [GitHub Pages]
+tags: [GitHub Pages, Jekyll]
 ---
 
 Bạn đang có ý định tạo một **Blog** nhầm chia sẽ kiến thức, hiện nay có khá nhiều nền tảng hỗ trợ người dùng xây dựng một **Blog** như: WordPress, Blogspot, Medium, ... Trong bài viết này, tôi xin giới thiệu thêm một nền tảng hoàn toàn miễn phí nữa đó là **GitHub Pages** kết hợp với **Jekyll**.
