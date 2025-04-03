@@ -29,4 +29,11 @@ Hầu hết patterns được mọi người trình bày theo cách tái sử d�
 
 Liệt kê chi tiết một số danh mục pattern hữu ít khác, chẳng hạn như khả năng áp dụng của mẫu, các bước triển khai và mối quan hệ với các mẫu khác
 
-## [Reference](https://refactoring.guru/design-patterns/what-is-pattern)
+## Tại sao bạn nên học về patterns?
+
+Sự thật bạn có thể đã làm quản lý các programmer trong nhiều năm mà không hề biết đến một pattern. Nhiều người khác cũng thế. Trong trường hợp này, hiểu là bạn có thể đã thực hiện một số patterns mà không hề biết về chúng. Đó có phải là lý do bạn nên học về chúng?
+
+- Design patterns là một bộ tookit của việc thử và test giải pháp cho các vấn đề chung trong việc phát triển phần mền. Thậm chí bạn chưa bao giờ gặp vấn đề, biết về patterns vẫn sẽ hữu ít, bởi vì nó dạy bạn cách sắp xếp cách giải quyết vấn đề khi sử dụng các nguyên tắc của thiết kế hướng đối tượng.
+
+- Design patterns định nghĩa một ngôn ngữ chung cho bạn và các thành viên trong team có thể sử dụng để giao tiếp một cách hiệu quả. Bạn có thể nói "Oh, nên sử dụng Singleton cho trường hợp kia", và mọi người sẽ hiểu ý tưởng phía sau lời phát biểu của bạn. Không cần giải thích singleton là gì nếu mọi người đã biết về pattern này.
+
