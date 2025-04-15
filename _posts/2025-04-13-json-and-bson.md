@@ -53,7 +53,7 @@ Ngày nay, JSON xuất hiện nhiều trong các trường hợp:
 
 ## Kết nối MongoDB-JSON
 
-MongoDB được thiết kế cho việc bắt đầu tìm hiểu về cơ sở dữ liệu, nó dành cho những lập trình viên ít kinh nghiệm. JSON là lựa chọn tuyệt vời khi trình bày cấu trúc dữ liệu của [document data model](../document-data-model.md) trong MongoDB.
+MongoDB được thiết kế cho việc bắt đầu tìm hiểu về cơ sở dữ liệu, nó dành cho những lập trình viên ít kinh nghiệm. JSON là lựa chọn tuyệt vời khi trình bày cấu trúc dữ liệu của [document data model](https://www.mongodb.com/resources/basics/databases/document-databases) trong MongoDB.
 
 Dễ dàng build các ứng dụng với kỹ thuật stacks như **MEAN** và **MERN**, một lập trình viên có thể sử dụng một ngôn ngữ lập trình (JavaScript) cho cả ứng dụng.
 
