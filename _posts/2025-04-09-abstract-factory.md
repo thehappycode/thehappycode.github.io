@@ -42,7 +42,7 @@ Trước tiên, **Abstract Factory** pattern khuyên bạn nên thực hiện kh
 ![solution1](../assets/img/posts/2025-04-09-abstract-factory/solution1.png)
 
 
-Bước tiếp theo, là khai báo một interface **Abstract Factory** bao gồm danh sách các phương thức creation dành cho nhóm tất cả các sản phẩm trong họ sản phẩm. Ví dụ `createChair`, `createSofa`, `createCoffeeTable`. Những phương thức này sẽ return về một **abstract** product type được trình bày bởi những intefaces chúng ta đã khai báo bên trên: `Chair`, `Sofa`, `CoffeeTable`
+Bước tiếp theo, là khai báo một interface **Abstract Factory** bao gồm danh sách các phương thức creation dành cho nhóm tất cả các sản phẩm trong họ sản phẩm. Ví dụ `createChair`, `createSofa`, `createCoffeeTable`. Những phương thức này sẽ return về một loại sản phẩm trừ tượng **abstract** được trình bày bởi những intefaces chúng ta đã khai báo bên trên: `Chair`, `Sofa`, `CoffeeTable`
 
 
 ![solution2](../assets/img/posts/2025-04-09-abstract-factory/solution2.png)
@@ -56,7 +56,7 @@ Client cod có thể làm việc với cả factories và products thông qua ab
 ![solution3](../assets/img/posts/2025-04-09-abstract-factory/solution3.png)
 
 
-Client muốn một factory để tạo một product chair. Client không cần p hải nhận thức về class factory đó, cũng không quan trọng là loại chair nào. Cho dù là Model hay Victorian, client cũng đều cư xử giống nhau, bằng việc sử dụng abstract interface `Chair`. Với phương pháp này, client chỉ cần biết một thứ là chair sẽ thực thi `sitOn` bên trên phương thức nào. Ngoài ra bất kỳ một biến thể nào chair được trả ra, nó cũng đều match với kiểu sofa hoặc coffee table theo đúng cách này.
+Client muốn một factory để tạo một sản phẩm chair. Client không cần phải nhận biết về class factory đó, cũng không quan trọng là loại chair nào. Cho dù là Model hay Victorian, client cũng đều cư xử giống nhau, bằng việc sử dụng abstract interface `Chair`. Với phương pháp này, client chỉ cần biết một thứ là chair sẽ thực thi `sitOn` bên trên phương thức nào. Ngoài ra bất kỳ một biến thể nào chair được trả ra, nó cũng đều match với kiểu sofa hoặc coffee table theo đúng cách này.
 
 ---
 
@@ -68,13 +68,13 @@ Client muốn một factory để tạo một product chair. Client không cần
 
 1. **Abstract Products** khai báo interface cho một tập hợp những sản phẩm có liên quan để làm một họ sản phẩm.
 
-2. **Concrete Products** là những biến thể sẽ thực thi abstract products, một nhóm theo các biến thể. Mỗi abstract product (chair/sofa) bắt buộc phải thực thi trong tất cả biến thể (Victorian/Modern).
+2. **Concrete Products** là những biến thể sẽ triển khai abstract products, một nhóm theo các biến thể. Mỗi abstract product (chair/sofa) bắt buộc phải triển khai tất cả biến thể (Victorian/Modern).
 
 3. **Abstract Factory** khai báo interface của một tập các phương thức để tạo cho mỗi abstract products.
 
-4. **Concrete Factories** thực thi phương thức tạo từ abstract factory. Mỗi concrete factory có trách nhiệm cho các biến thể của product và chỉ tạo sản phẩm cho những biến thể đó.
+4. **Concrete Factories** triển khai phương thức tạo từ abstract factory. Mỗi concrete factory có trách nhiệm cho các biến thể của của sản phẩm và chỉ tạo sản phẩm cho những biến thể đó.
 
-5. Mặc dù concrete factories là khởi tạo cho concrete products, đánh dấu (signatures) phương thức tạo bắt buộc có trách nhiệm phải trả về abstract products. Đây là cách mà client code sử dụng factory mà không ràng buộc với một biến thể cụ thể của product, nó nhận từ factory. Client có thể làm việc với bất kỳ biến thể nào của concrete factory/product, phụ thuộc vào sự giao tiếp giữa đối tượng thông qua abstract intefaces.
+5. Mặc dù concrete factories là khởi tạo cho concrete products, đánh dấu (signatures) phương thức tạo bắt buộc có trách nhiệm phải trả về những sản phẩm trừ tượng. Đây là cách mà client code sử dụng factory mà không ràng buộc với một biến thể cụ thể của product, nó nhận từ factory. Client có thể làm việc với bất kỳ biến thể nào của concrete factory/product, phụ thuộc vào sự giao tiếp giữa đối tượng thông qua abstract intefaces.
 
 ---
 
