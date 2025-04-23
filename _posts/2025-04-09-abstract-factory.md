@@ -90,7 +90,7 @@ Client muốn một factory để tạo một sản phẩm chair. Client không 
 
 Abstract Factory cung cấp cho bạn một interface để tạo đối tượng từ class của họ sản phẩm. Code bạn sẽ tạo đối tượng thông qua interface, bạn không cần phải sợ khi tạo sai biến thể của sản phẩm, mà không match với những sản phẩm đã sẵn sàng được tạo trước đó từ ứng dụng của bạn.
 
-### Hãy cân nhắc thực thi Abstract Factory khi bạn có một tập hợp các [Factory Methods](./2025-04-03-factory-method.md) mà trách nhiệm chính của chúng trở nên mờ nhạt.
+### Hãy cân nhắc thực thi Abstract Factory khi bạn có một tập hợp các [Factory Methods](../factory-method) mà trách nhiệm chính của chúng trở nên mờ nhạt.
 
 Trong thiết kế tốt cho chương trình, mỗi class chỉ có một trách nhiệm duy nhất về một việc gì đó. Khi class xử lý nhiều loại sản phẩm khác nhau, bạn nên tách các phương thức tạo đối tượng sản phẩm ra bằng việc sử dụng Factory Method hoặc triển khai theo Abstract Factory.
 
