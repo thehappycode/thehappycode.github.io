@@ -89,6 +89,57 @@ Bạn có thể tham khoả mã nguồn [tại đây](https://github.com/thehapp
 
 ---
 
+## Invoce Factory Method
+
+Dự án này minh họa việc sử dụng **Factory Method Design Pattern** để tạo các loại hóa đơn khác nhau trong một hệ thống quản lý hóa đơn. Mỗi loại hóa đơn được triển khai với các đặc điểm riêng biệt, như thuế, chiết khấu, hoặc phí bổ sung.
+
+### Mục tiêu
+
+- Tổ chức mã nguồn theo mô hình **Factory Method**.
+- Tạo các loại hóa đơn khác nhau (`Invoice01`, `Invoice02`, ...) với các đặc điểm riêng.
+- Dễ dàng mở rộng hệ thống bằng cách thêm các loại hóa đơn mới mà không làm thay đổi mã nguồn hiện tại.
+
+### Kiến trúc
+
+Dưới đây là sơ đồ UML mô tả kiến trúc của dự án:
+
+![Invoice Factory Method](../assets/img/posts/2025-04-03-factory-method/invoice-factory-method.png)
+
+### Các thành phần chính:
+
+1. **`IInvoice` (Interface)**:
+
+   - Định nghĩa các phương thức chung cho tất cả các loại hóa đơn, như `CalculateTotal()` và `ToString()`.
+
+2. **`BaseInvoice` (Abstract Class)**:
+
+   - Lớp cơ sở chứa các thuộc tính và phương thức chung cho tất cả các loại hóa đơn.
+
+3. **`Invoice01`, `Invoice02` (Concrete Classes)**:
+
+   - Các lớp cụ thể kế thừa từ `BaseInvoice` và triển khai các phương thức riêng biệt.
+
+4. **`BaseCreatorInvoice` (Abstract Class)**:
+
+   - Lớp cơ sở cho các lớp tạo hóa đơn (`CreatorInvoice01`, `CreatorInvoice02`).
+
+5. **`CreatorInvoice01`, `CreatorInvoice02` (Concrete Classes)**:
+
+   - Các lớp cụ thể triển khai phương thức `CreateInvoice()` để tạo các loại hóa đơn tương ứng.
+
+6. **`InvoiceFactory` (Factory Class)**:
+   - Lớp chịu trách nhiệm tạo các loại hóa đơn dựa trên `InvoiceType`.
+
+### Thêm loại hóa đơn mới
+
+- Tạo một lớp mới kế thừa từ BaseInvoice.
+- Tạo một lớp Creator mới kế thừa từ BaseCreatorInvoice.
+- Cập nhật InvoiceFactory để hỗ trợ loại hóa đơn mới.
+
+Bạn có thể tham khoả mã nguồn [tại đây](https://github.com/thehappycode/POC/tree/design-patterns/src/design-patterns/practice/creational-patterns/factory-method/InvocieFactoryMethod)
+
+---
+
 ## Applicability
 
 ### Sử dụng Factory Method khi bạn không biết trước chính xác kiểu và những phụ thuộc của đối tượng trong khi bạn code. 
