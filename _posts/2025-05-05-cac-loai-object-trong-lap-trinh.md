@@ -5,6 +5,16 @@ categories: [.NET]
 tags: [POCO, Entity, DTO, ETO, Model, Domain Model]
 ---
 
+Tài liệu này cung cấp cái nhìn tổng quan và phân biệt rõ ràng giữa các loại object phổ biến trong lập trình .NET, bao gồm: `POCO`, `Entity`, `DTO`, `ETO`, `Model (ViewModel)` và `Domain Model`.  
+Nội dung trình bày dưới dạng bảng so sánh chi tiết về đặc điểm, mục đích sử dụng và tình huống nên áp dụng của từng loại object, kèm theo các **ví dụ cụ thể bằng mã C#** để minh họa.
+
+Tài liệu phù hợp cho:
+- Lập trình viên .NET ở mọi cấp độ muốn chuẩn hóa kiến thức mô hình hóa đối tượng.
+- Người học Domain-Driven Design (DDD), Clean Architecture hoặc phát triển ứng dụng nhiều tầng.
+- Các nhóm phát triển muốn xây dựng kiến trúc rõ ràng, dễ bảo trì và test.
+
+---
+
 ## POCO (Plain Old CLR Object)
 
 - Class đơn giản không phụ thuộc vào framework.
