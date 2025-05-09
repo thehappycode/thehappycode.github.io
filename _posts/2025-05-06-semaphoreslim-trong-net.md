@@ -53,7 +53,7 @@ count -= 1      count -= 1
      ▼                ▼                       ▼               ▼
 Được phép         Được phép            Chờ semaphore    Chờ semaphore
      |                |                       |               | 
-     ▼│               ▼                       ▼               ▼
+     ▼                ▼                       ▼               ▼
 Xử lý tài nguyên Xử lý tài nguyên      (Blocked state)  (Blocked state)
 
 (sau khi xong việc)
@@ -63,6 +63,7 @@ Xử lý tài nguyên Xử lý tài nguyên      (Blocked state)  (Blocked state
      │                │
      ▼                ▼
 count += 1      count += 1
+     |                |
      ▼                ▼
 Thread 3 được chạy → Thread 4 được chạy tiếp theo
 
@@ -77,11 +78,13 @@ Thread 3 được chạy → Thread 4 được chạy tiếp theo
 | Thread1: `WaitAsync()`  | 2            | 1         |
 | Thread2: `WaitAsync()`  | 1            | 0         |
 | Thread3: `WaitAsync()`  | 0            | 0 (chờ)   |
+| Thread4: `WaitAsync()`  | 0            | 0 (chờ)   |
 | Thread1: `Release()`    | 0            | 1         |
 | Thread2: `Release()`    | 1            | 2         |
 
-- `Wait()`, `WaitAsync()` giống như **xin quyền vào** → giảm `count`
+- `Wait()`, `WaitAsync()` giống như **xin quyền vào** → giảm `count` 
 - `Release()` giống như **nhường quyền lại** → tăng `count`
+
 ---
 
 ## Ví dụ
