@@ -7,13 +7,15 @@ tags: [.NET, Exception]
 
 `Exception` (Ngoại lệ) giống như một chuông báo động, cho các lập trình viên biết có điều gì đó không đúng khi chương trình chạy, nó giúp các lập trình viên đưa ra phương án xử lý phù hợp theo từng loại cảnh báo. Trong bài viết này chúng ta sẽ tìm hiểu sâu hơn về ý nghĩa, cơ chế hoạt động, danh sách Exception, cách Custom Exception, cũng như vấn đề về bảo mật liên quan đến Excetion.
 
+---
+
 ## Exception là gì?
 
 Trong .NET, `Exception` (ngoại lệ) là một cơ chế dùng để phát hiện, xử lý các lỗi phát sinh trong khi chạy chương trình.
 
 ---
 
-## Tại sao Exception lại quan trong?
+## Tại sao Exception lại quan trọng?
 
 Có một bệnh nhận cảm thấy trong người không khoẻ và đi đến bệnh viện để khám.
 
@@ -52,7 +54,7 @@ public void ServiceLayerMethod()
 
 ```
 
-### `try-catch-finally`
+### try-catch-finally
 
 CLR hoạt động theo logic sau:
 
@@ -341,7 +343,7 @@ Tiết lộ thông tin:
 
 #### Path Disclosure
 
-```json
+```
 
 Could not find file C:\inetpub\wwwroot\myapp\files\xyz.txt
 
