@@ -84,6 +84,8 @@ Khi bạn `throw new Exception(...)`. Thì .NET, CLR sẽ tạo ra một đối 
 
 ## Cây phân cấp Exception trong .NET
 
+```text
+
 System.Object
   └── System.Exception - Gốc của toàn bộ ngoại lệ
         ├── System.SystemException - Các lỗi hệ thống, runtime/CLR hoặc  .NET framework sinh ra
@@ -127,6 +129,7 @@ System.Object
         ├── System.ApplicationException
         │     └── (nơi bạn có thể kế thừa cho Custom Exception)
         └── (các Exception nghiệp vụ do lập trình viên tự định nghĩa)
+```
 
 Với cây phân cấp Exception sẽ giúp bạn phân loại lỗi chính xác và dễ debug.
 
