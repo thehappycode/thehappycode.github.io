@@ -23,8 +23,8 @@ tags: [Design Patterns, Design Principle]
 
 ### Favor composition over inheritance.
 
-Ưu tiên sử dụng thành phần hơn là kế thừa. Thành phần ở đây được hiểu là class, interface. Do đó ta có thể hiểu một class nên ưu tiên phụ thuộc vào một class/interface hơn là phụ thuộc vào kế thừa vì nó mang lại sự linh hoạt và dễ bào trì hơn. Nguyên nhân do kế thừa có thể dẫn đến các vấn đề như kết nối chặc chẽ giữa các class dẫn đến khó thay đổi thiết kết, trong khi thành phần cho phép xây dựng các đối tượng phức tạp bằng cách kết hợp các đối tượng đơn giản, dễ dàng mở rộng và sửa đổi
+**Ưu tiên sử dụng thành phần hơn là kế thừa**. Thành phần ở đây được hiểu là class, interface. Do đó ta có thể hiểu một class nên ưu tiên phụ thuộc vào một class/interface hơn là phụ thuộc vào kế thừa vì nó mang lại sự linh hoạt và dễ bào trì hơn. Nguyên nhân do kế thừa có thể dẫn đến các vấn đề như kết nối chặc chẽ giữa các class dẫn đến khó thay đổi thiết kết, trong khi thành phần cho phép xây dựng các đối tượng phức tạp bằng cách kết hợp các đối tượng đơn giản, dễ dàng mở rộng và sửa đổi
 
 ### Strive for loosely coupled designs between objects that interact.
 
-Cố gắn thiết kế các đối tượng khi tương tác với nhau không được liên kết một cách chặc chẻ. Với cách thiết kế này cho phép chúng ta xây dựng hệ thống có tính linh hoạt cao khi cần xử lý những thay đổi bởi vì giữa các đối tượng ít có sự phụ thuộc lẫn nhau.
+**Cố gắng thiết kế các đối tượng khi tương tác với nhau không được liên kết một cách chặc chẽ. Với cách thiết kế này cho phép chúng ta xây dựng hệ thống có tính linh hoạt cao khi cần xử lý những thay đổi bởi vì giữa các đối tượng ít có sự phụ thuộc lẫn nhau.
