@@ -23,8 +23,7 @@ Giờ thì mời anh em cùng theo chân tôi pha một ly cà phê nhé.
 - Ly
 - Nước sôi
 
-Sau khi chuẩn bị đủ, ta cho khoảng **3 muỗng cà phê** vào ly, thêm nước sôi,  
-rồi chờ hơn **5 phút** để thưởng thức cái thứ nước màu cánh gián, đắng ngắt nhưng thơm phức này.
+Sau khi chuẩn bị đủ, ta cho khoảng **3 muỗng cà phê** vào ly, thêm nước sôi, rồi chờ hơn **5 phút** để thưởng thức cái thứ nước màu cánh gián, đắng ngắt nhưng thơm phức này.
 
 ---
 
@@ -40,13 +39,6 @@ Tôi sẽ phải làm công việc tương tự:
 Pha trà cầu kỳ hơn pha cà phê, nhưng tôi chọn cách nhanh gọn:  
 Cho trà vào bình, thêm nước sôi, chờ ngấm và mời cả nhà thưởng thức.
 
----
-
-> **"Ôi giời ơi! Đọc mãi toàn trà với cà phê, IoC đâu mất rồi?"**  
-> – Một độc giả sốt ruột :))
-
----
-
 ## Vấn đề: Sự phụ thuộc
 
 Qua ví dụ trên, bạn sẽ thấy:  
@@ -57,6 +49,11 @@ Qua ví dụ trên, bạn sẽ thấy:
 - Cách pha chế
 
 Nếu muốn thưởng thức loại đồ uống khác, tôi lại phải chuẩn bị toàn bộ từ đầu.
+
+---
+
+> **"Ôi giời ơi! Đọc mãi toàn trà với cà phê, IoC đâu mất rồi?"**  
+> – Một độc giả sốt ruột 😠
 
 ---
 
