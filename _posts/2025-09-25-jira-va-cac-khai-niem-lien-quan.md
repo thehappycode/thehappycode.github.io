@@ -19,17 +19,17 @@ Là dự án phần mền cần phát triển. Ví dụ phát triển website, �
 
 ### Issue
 
-Là đơn vị công việc trong Jira. Issue có thể là: `Epic`, `Use Story`, `Task`, `Bug`.
+Là đơn vị công việc trong Jira. Issue có thể là: `Epic`, `User Story`, `Task`, `Bug`.
 
 ### Workflow
 
 Mỗi công việc (issue) trong Jira đều đi qua **một quy trình trạng thái (workflow)**. Tuỳ thuộc vào từng dự án mà chúng ta có thể thiết kế workflow riêng sao cho phù hợp.
 
-Ví dụ quy trình cho Dev team: `To Do → In Progress → In Review → Testing → Done`
+Ví dụ quy trình cho Dev team: `To Do → In Progress → In Review → Testing → Done`.
 
 Workflow giúp chúng ta dễ dàng theo dõi:
- - Công việc đang ở đâu
- - Ai đang phụ trách
+ - Công việc đang ở đâu.
+ - Ai đang phụ trách.
  - Và tình trạng thế nào.
 
 ### Sprint
@@ -73,6 +73,7 @@ Ví dụ: "Là một khách hàng, tôi muốn lưu địa chỉ giao hàng mặ
 ### Task / Sub-task
 
 **Task**: Một công việc cần làm (có thể là từ User Story hoặc độc lập).
+
 **Sub-task**: Công việc nhỏ hơn, tách ra từ một Task/User Story.
 
 Ví dụ:
@@ -85,6 +86,7 @@ Ví dụ:
 ### Bug / Hotfix
 
 **Bug:** Vấn đề/lỗi trong hệ thống (QA/Dev phát hiện).
+
 **Hotfix:** Bản sửa lỗi khẩn cấp (thường trên môi trường production).
 
 ### Label
@@ -100,7 +102,7 @@ Ví dụ: Label: `frontend`, `backend`, `UI`, `urgent`, `payment`.
 
 ---
 
-## 🔗 Tóm tắt mối quan hệ các khái niệm
+## Tóm tắt mối quan hệ các khái niệm
 
 | **Khái niệm**    | **Giải thích**                | **Ví dụ**                          |
 |------------------|-------------------------------|------------------------------------|
