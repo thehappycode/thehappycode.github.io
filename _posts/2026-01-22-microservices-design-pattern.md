@@ -1,3 +1,11 @@
+---
+title: Microservices Design Pattern
+date: 2026-01-22 23:18:00 +0700
+categories: [Mindmap]
+tags: [Design Patterns]
+---
+
+
 ```mermaid
 mindmap
   root((Microservices<br/>Design Pattern))
