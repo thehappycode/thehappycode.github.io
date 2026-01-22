@@ -16,7 +16,7 @@ tags: [Mermaid, Diagrams]
 
 Cần phải plugin thêm [jekyll-mermaid](https://github.com/jasonbellamy/jekyll-mermaid) để tạo được diagram tại máy local. Như ví dụ bên dưới
 
-```mermaid
+```html
 flowchart LR
     A(fa:fa-laptop-code Developer) --> B(fab:fa-github GitHub<br>code/issues/etc)
     B --> C(fa:fa-server Build)
@@ -28,7 +28,9 @@ Tuy nhiên, plugin này không phải là official của `GitHubPages` nên khô
 
 ### Sử dụng Mermaid trực tiếp với `html tag`
 
-Thêm file `mermaid.html` trong thư mục `_includes`. Nếu không tìm thấy thư mục `_includes` thì tạo mới.
+Thêm file `mermaid.html` trong thư mục `_includes`.
+
+Nếu không tìm thấy thư mục `_includes` thì sử dụng lệnh `$ bundle info --path jekyll-theme-chirpy` để tìm packaged gem file. Sau đó copy thư mục vào trong local project. Jekyll sẽ luôn ưu tiên file ở thưc mục local hơn là trong packaged gem file 
 
 ```html
 <script type="module">
@@ -45,7 +47,7 @@ Thêm file `mermaid.html` trong thư mục `_includes`. Nếu không tìm thấy
 </script>
 ```
 
-Sau đó update file `head.html` hoặc thêm mới nếu chưa có trong thư mục `_include`
+Sau đó update file `head.html` hoặc thêm mới nếu chưa có trong thư mục `_includes`
 
 ```html
 {% if page.mermaid %}
