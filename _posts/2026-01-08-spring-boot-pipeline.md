@@ -56,3 +56,98 @@ Dưới đây là mô tả về các bước trong pipeline xử lý request c�
 
 - Xử lý ngoại lệ phát sinh trong quá trình xử lý request, tránh lộ stacktrace ra client.
 - Cung cấp phản hồi lỗi chuẩn hóa, thân thiện với người dùng.
+
+---
+
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant LoggingTraceFilter
+    participant XssFilter
+    participant SpringSecurity
+    participant DispatcherServlet
+    participant AppInterceptor
+    participant Controller
+    participant Service
+    participant Repository
+    participant ExceptionHandler
+    
+    Client->>LoggingTraceFilter: HTTP Request
+    activate LoggingTraceFilter
+    Note over LoggingTraceFilter: 1. Set traceId vào MDC<br/>2. Log request info<br/>3. Start timer
+    
+    LoggingTraceFilter->>XssFilter: chain.doFilter()
+    activate XssFilter
+    Note over XssFilter: Wrap request với<br/>XssWrapper (TODO)
+    
+    XssFilter->>SpringSecurity: chain.doFilter()
+    activate SpringSecurity
+    Note over SpringSecurity: 1. Extract JWT token<br/>2. Validate với Keycloak<br/>3. Check authorization<br/>4. Set SecurityContext
+    
+    alt Public Path (/swagger-ui, /login, /actuator)
+        SpringSecurity-->>Client: Permit All (skip auth)
+    else Protected Path
+        alt JWT Invalid
+            SpringSecurity-->>Client: 401 Unauthorized
+        else No Permission
+            SpringSecurity-->>Client: 403 Forbidden
+        else JWT Valid + Authorized
+            SpringSecurity->>DispatcherServlet: Continue
+        end
+    end
+    
+    activate DispatcherServlet
+    Note over DispatcherServlet: Route to handler
+    
+    DispatcherServlet->>AppInterceptor: preHandle()
+    activate AppInterceptor
+    Note over AppInterceptor: 1. Parse JWT claims<br/>2. Get user info<br/>3. Load branch permissions (Redis/DB)<br/>4. Load invoice template permissions<br/>5. Set TenantContext<br/>6. Set UserContextHelper
+    
+    AppInterceptor->>Controller: Request Handler Method
+    activate Controller
+    Note over Controller: Validate @RequestBody<br/>@Valid, @Validated
+    
+    Controller->>Service: Business Logic
+    activate Service
+    
+    Service->>Repository: Query Database
+    activate Repository
+    Repository-->>Service: Data
+    deactivate Repository
+    
+    alt Business Exception
+        Service-->>ExceptionHandler: Throw Exception
+        activate ExceptionHandler
+        Note over ExceptionHandler: Map exception to<br/>Response<Object>
+        ExceptionHandler-->>Controller: ResponseEntity
+        deactivate ExceptionHandler
+    else Success
+        Service-->>Controller: Result
+    end
+    
+    deactivate Service
+    Controller-->>AppInterceptor: Response
+    deactivate Controller
+    
+    AppInterceptor->>AppInterceptor: postHandle()
+    Note over AppInterceptor: Clear UserContextHelper
+    
+    AppInterceptor-->>DispatcherServlet: Response
+    deactivate AppInterceptor
+    deactivate DispatcherServlet
+    
+    SpringSecurity-->>XssFilter: Response
+    deactivate SpringSecurity
+    
+    XssFilter-->>LoggingTraceFilter: Response
+    deactivate XssFilter
+    
+    LoggingTraceFilter->>LoggingTraceFilter: finally block
+    Note over LoggingTraceFilter: 1. Log response status<br/>2. Log processing time<br/>3. MDC.clear()
+    
+    LoggingTraceFilter-->>Client: HTTP Response
+    deactivate LoggingTraceFilter
+
+```

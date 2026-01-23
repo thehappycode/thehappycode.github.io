@@ -3,8 +3,8 @@ title: Microservices Design Pattern
 date: 2026-01-22 23:18:00 +0700
 categories: [Mindmap]
 tags: [Design Patterns]
+mermaid: true
 ---
-
 
 ```mermaid
 mindmap
@@ -73,7 +73,7 @@ mindmap
           )
           (Có 2 pattern để triển khai)
             (Self registration pattern)
-              (Khi cần đăng ký network local #40ip:port#41
+              (Khi cần đăng ký network local #40;ip:port#41;
                sẽ gọi đến Registration API trong service registry
               )
               (Khi sử dụng thì clien sẽ query đến Query API
@@ -99,7 +99,36 @@ mindmap
         )
         (AMQP)
         (STOMP)
-
+        (Overview of message
+          Sender: Write a message to channel
+          Receiver: Read a message from channel
+        )
+          (About message)
+            (**header**: là tập hợp cặp key-value
+              trình bày data của sender.
+            )
+              (Header có một `uniquer message id`)
+              (Optional `return address` để reply)
+            (**body**: là data sender, có thể là text hoặc binary)
+          (About message channel)
+            (Message channel là nơi trao đổi message)
+            (Message channel là một abstraction của message infrastructure)
+            (Có hai loại message channel)
+              (**point to point**)
+                (Channel sẽ chuyển message
+                  đến chính xác consumer
+                )
+                (Là loại giao tiếp tương tác
+                  one-to-one
+                )
+              (**publish-subscribe**)
+                (Channel sẽ chuyển message
+                  đến tất cả consumer đã được
+                  liên kết #40;*acttached*#41;
+                )
+                (Là loại giao tiếp tương tác
+                 one-to-many
+                )
 
     {{Chapter 04}}
 
