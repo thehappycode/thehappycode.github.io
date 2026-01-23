@@ -8,7 +8,7 @@ tags: [Design Patterns]
 
 ```mermaid
 mindmap
-  root((Microservices<br/>Design Pattern))
+  root((Microservices Design Pattern))
     
     {{Chapter 01}}
       
@@ -50,6 +50,45 @@ mindmap
             /api/orders/#123;orderId#125;/cancel và /api/orders/#123;orderId#125;/reverse
           )
         (gRPC)
+          (gRPC sẽ tránh được các thử thách của REST API như:
+            - HTTP chỉ cung cấp giới hạn verb
+          )
+          (gRPC là một 
+            binary mesage-base protocol
+          )
+          (gRPC hỗ trợ stream RPC)
+          (Bạn có thể defined gRPC APIs 
+            sử dụng Protocol Buffers-based IDL.
+            Protocol Buffer phải sử dụng format HTTP/2
+          )
+        (Handling partial failure using
+          the Circuit breaker pattern
+        )
+          (Nếu số lượng request lỗi vượt ngưỡng cho phép
+           thì sẽ trip circuit breaker và trả lỗi trực tiếp
+          )
+        (Using service discovery)
+          (Giải quyết bài toàn về xác định ip:port 
+            khi hệ thống autoscaling, failures và upgrades
+          )
+          (Có 2 pattern để triển khai)
+            (Self registration pattern)
+              (Khi cần đăng ký network local #40ip:port#41
+               sẽ gọi đến Registration API trong service registry
+              )
+              (Khi sử dụng thì clien sẽ query đến Query API
+                trong service registry để lấy danh sách network local
+              )
+            (Application level servie discovery như: Netflix, Eureka.
+              Sử dụng DNS thay cho network
+              local
+            )
+              (Khi cần đăng ký thì gọi vào
+               3rd party registration pattern
+              )
+              (Khi cần sử dụng thì gọi vào
+               server-side discovery pattern
+              )
         
       (**asynchronous**
         Message Broker
@@ -65,5 +104,4 @@ mindmap
     {{Chapter 04}}
 
     {{Chapter 05}}
-
-```                                 
+```
